@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Виселица</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Visilica</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<div id="start" class="screen active">
-  <h2>Введите слово</h2>
-  <input type="password" id="wordInput">
-  <button onclick="startGame()">Играть</button>
-  <h3>или выберите тему:</h3>
-  <button onclick="chooseTheme('Погода')">Погода</button>
-  <button onclick="chooseTheme('Города')">Города</button>
-  <button onclick="chooseTheme('Животные')">Животные</button>
-  <button onclick="chooseTheme('Фрукты')">Фрукты</button>
-  <button onclick="chooseTheme('Спорт')">Спорт</button>
-</div>
-
-<div id="game" class="screen">
-  <h2>Игра</h2>
-  <div class="word" id="wordDisplay"></div>
-  <p id="attemptsDisplay">Осталось попыток: 10</p>
-  <canvas id="hangman" width="200" height="250"></canvas>
-  <div class="alphabet" id="alphabet"></div>
-  <button id="hintBtn" onclick="hint()">Подсказка</button>
-</div>
-
-<div id="result" class="screen">
-  <h2 id="resultText"></h2>
-  <button onclick="newGame()">Новая игра</button>
-</div>
-
-<script src="script.js"></script>
+<body class="light">
+    <header>
+        <button id="themeToggle">🌙</button>
+    </header>
+    <div id="start" class="screen active">
+        <h2>Enter a word</h2>
+        <input type="password" id="wordInput">
+        <button onclick="startGame()">Play</button>
+        <h3>or choose a theme:</h3>
+        <div class="themes">
+            <button onclick="chooseTheme('Погода')">Weather</button>
+            <button onclick="chooseTheme('Города')">Cities</button>
+            <button onclick="chooseTheme('Животные')">Animals</button>
+            <button onclick="chooseTheme('Фрукты')">Fruits</button>
+            <button onclick="chooseTheme('Спорт')">Sports</button>
+        </div>
+    </div>
+    <div id="game" class="screen">
+        <h2>Game</h2>
+        <div class="word" id="wordDisplay"></div>
+        <p id="attemptsDisplay">Attempts left: 10</p>
+        <canvas id="game_board" width="250" height="300"></canvas>
+        <div class="alfavit" id="alfavit"></div>
+        <button id="hintBtn" onclick="hint()">Hint</button>
+    </div>
+    <div id="result" class="screen">
+        <h2 id="resultText"></h2>
+        <p id="wordReveal"></p>
+        <button id="newGameBtn" onclick="newGame()">New Game</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
