@@ -1,69 +1,94 @@
-/* Base */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+body 
+{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Emoji", "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
   transition: background 0.3s, color 0.3s;
 }
-
-/* Themes */
-body.light { background: #f9f9f9; color: #222; }
-body.dark  { background: #1c1c1c; color: #e0e0e0; }
-
-header {
+body.light 
+{ 
+  background: #f9f9f9; 
+  color: #222; 
+}
+body.dark  
+{ 
+  background: #1c1c1c; 
+  color: #e0e0e0; 
+}
+header 
+{
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
   padding: 15px;
 }
-
-#themeToggle {
+header button 
+{
   font-size: 28px;
   border: none;
   background: none;
   cursor: pointer;
   transition: transform 0.2s;
 }
-#themeToggle:hover { transform: scale(1.2); }
-
-/* Screens */
-.screen { display: none; padding: 40px; }
-.active { display: block; }
-
-/* Titles */
-h2 { font-size: 32px; margin-bottom: 20px; font-weight: 600; }
-h3 { font-size: 24px; margin-top: 30px; }
-
-/* Word display */
-.word {
+header button:hover 
+{ 
+  transform: scale(1.2); 
+}
+.screen 
+{ 
+  display: none; 
+  padding: 40px; 
+}
+.active
+{ 
+  display: block; 
+}
+h2 
+{ 
+  font-size: 32px; 
+  margin-bottom: 20px; 
+  font-weight: 600; 
+}
+h3 
+{ 
+  font-size: 24px; 
+  margin-top: 30px; 
+}
+.word 
+{
   font-size: 40px;
   letter-spacing: 18px;
   margin: 30px;
   font-weight: bold;
 }
-
-/* Attempts */
-#attemptsDisplay {
+#attemptsDisplay 
+{
   font-size: 22px;
   margin: 15px;
   opacity: 0.8;
 }
-
-/* Game board canvas */
-#game_board {
+#game_board
+{
   border: 2px solid #ccc;
   margin: 30px auto;
   display: block;
   background: transparent;
 }
-body.dark #game_board { border-color: #fff; }
-
-/* Themes block */
-.themes { margin-top: 20px; }
-.themes button { margin: 8px; }
-
-/* Buttons */
-#hintBtn, #result button, #start button, .themes button {
+body.dark #game_board
+{ 
+  border-color: #fff; 
+}
+.themes 
+{ 
+  margin-top: 20px; 
+}
+.themes button 
+{ 
+  margin: 8px; 
+}
+#hintBtn #result button #start button .themes button 
+{
   margin-top: 20px;
   padding: 18px 35px;
   border: none;
@@ -75,21 +100,19 @@ body.dark #game_board { border-color: #fff; }
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
-#hintBtn:hover:not(:disabled),
-#result button:hover,
-#start button:hover,
-.themes button:hover {
+#hintBtn:hover:not(:disabled) #result button:hover #start button:hover .themes button:hover 
+{
   background: #339dff;
   transform: scale(1.05);
 }
-#hintBtn:disabled {
+#hintBtn:disabled 
+{
   background: #aaa;
   color: #666;
   cursor: not-allowed;
 }
-
-/* Input */
-input {
+input 
+{
   font-size: 22px;
   padding: 12px 20px;
   border-radius: 10px;
@@ -109,10 +132,12 @@ input {
   gap: 10px;
   margin: 10px 0;
 }
-.alfavit button {
-  width: 55px; height: 55px;
+.alfavit button 
+{
+  width: 55px;
+  height: 55px;
   border: none;
-  border-radius: 12px; 
+  border-radius: 12px;
   background: #007aff;
   color: #fff;
   font-size: 22px;
@@ -125,7 +150,7 @@ input {
   background: #339dff;
   transform: scale(1.08);
 }
-.alfavit button:disabled
+.alfavit button:disabled 
 {
   background: #ccc;
   color: #666;
@@ -133,26 +158,26 @@ input {
 }
 .alfavit button.correct 
 {
-  background: #28a745 !important; 
+  background: #28a745 !important;
   color: #fff;
 }
 .alfavit button.wrong 
 {
-  background: #dc3545 !important; 
+  background: #dc3545 !important;
   color: #fff;
 }
 #result 
-{
-  display: none;
-  padding: 60px 20px;
+{ 
+  display: none; 
+  padding: 60px 20px; 
 }
 #result.active 
 { 
-    display: block; 
+  display: block; 
 }
 #resultText 
 {
-  margin: 0 auto 20px;
+  margin: 0 auto 20px; 
 }
 .victory 
 {
@@ -189,7 +214,7 @@ input {
   transition: background 0.3s, transform 0.2s;
 }
 #newGameBtn:hover 
-{ 
-    background: #339dff; 
-    transform: scale(1.05); 
+{
+  background: #339dff;
+  transform: scale(1.05);
 }
